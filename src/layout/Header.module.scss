@@ -1,0 +1,55 @@
+.container {
+  position: fixed;
+  top: 0;
+  height: 70px;
+  left: 0;
+  right: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.innerContainer {
+  max-width: 1034px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.transparentBackground {
+  background-color: transparent;
+  -webkit-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.whiteBackground {
+  background-color: white;
+  -webkit-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.menu {
+  display: flex;
+  font-family: "FiraCode";
+  font-size: 16px;
+}
+.menu a {
+  margin-left: 70px;
+  color: #f00658;
+}
+
+li:first-child {
+  margin-left: 0;
+}
+
+a.title {
+  font-family: "Overpass";
+  font-size: 26px;
+  color: black;
+}
+a.title:visited {
+  color: black;
+}

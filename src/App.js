@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ProjectPage from "./pages/Project";
+import HomePage from "./pages/Home";
+import Header from "./layout/Header";
+import "./App.css";
+import ScrollToTop from "./hooks/scrollToTop";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <ScrollToTop />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/projects/:projectId" component={ProjectPage} />
+      </Switch>
+    </Router>
   );
 }
 
-export default App;
+// You can think of these components as "pages"
+// in your app.

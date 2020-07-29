@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links {
+  margin-top: 100px;
+  a {
+    padding: 20px;
+  }
+  a:last-child {
+    padding-right: 0;
+  }
+}
+
+.signature {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+}

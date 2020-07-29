@@ -1,0 +1,31 @@
+.skill {
+  display: flex;
+  flex-direction: column;
+  width: calc(33.333% - 20px);
+  margin: 0 20px;
+}
+
+.skill:first-child {
+  margin-left: 0;
+}
+
+.skill:last-child {
+  margin-right: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  max-width: 100%;
+  flex-shrink: 0;
+}
+
+.text {
+  font-family: "FiraCode";
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}

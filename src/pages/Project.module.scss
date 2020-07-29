@@ -1,0 +1,60 @@
+.container {
+  padding-top: 90px;
+}
+.title {
+  text-align: center;
+}
+.subtitle {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 118px;
+}
+
+.projectImg {
+  width: 100%;
+  margin-bottom: -5px;
+}
+
+.twoColumn {
+  display: flex;
+}
+
+.column {
+  width: 50%;
+}
+.list {
+  margin-top: 90px;
+}
+
+.paddingTop {
+  padding-top: 90px;
+}
+
+.column45 {
+  width: 45%;
+}
+.column55 {
+  width: 55%;
+}
+
+.column,
+.column45,
+.column55 {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  &:first-child {
+    padding-right: 20px;
+  }
+  &:last-child {
+    padding-left: 20px;
+  }
+}
+
+.imageText {
+  font-family: "Overpass";
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-top: auto;
+}

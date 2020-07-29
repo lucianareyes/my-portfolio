@@ -1,0 +1,16 @@
+.twoColumn {
+  margin-top: 30px;
+  display: flex;
+}
+
+.column {
+  width: 50%;
+}
+
+.column:first-child {
+  padding-right: 20px;
+}
+
+.column:last-child {
+  padding-left: 20px;
+}
