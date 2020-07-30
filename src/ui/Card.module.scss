@@ -1,8 +1,14 @@
+@import "../Global.scss";
+
 .card {
   display: flex;
   flex-direction: column;
   background: white;
   margin: 10px;
+  @media (max-width: $tablet) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .content {
@@ -21,13 +27,13 @@
 .text {
   font-family: "FiraCode";
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
   font-size: 16px;
 }
 
 .link {
   padding-top: 20px;
   margin-top: auto;
-  color: #f00658;
+  color: $red;
   justify-self: flex-end;
 }

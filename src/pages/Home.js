@@ -12,32 +12,33 @@ import { Link } from "react-router-dom";
 function HomePage() {
   return (
     <div>
-      <Block verticalPadding>
+      <Block staticTopPadding bottomPadding>
         <div className={styles.paddingTop}>
+          <span className={styles.preText}>HELLO, I'M LUCIANA REYES</span>
+          <br />
           <span className={styles.text}>
-            I'm a <Link to="/">Product (UX/UI) Designer</Link> infinitely
-            curious about people's needs and passionate about creating
-            delightful and human experiences.
+            <Link to="/">Product (UX/UI) Designer</Link> infinitely curious
+            about people's needs and passionate about creating delightful and
+            human experiences.
           </span>
         </div>
       </Block>
       <Block>
         <div className={styles.sectionIntro}>
           <ArrowIcon />
-          &nbsp;&nbsp;&nbsp;&nbsp;what i do best
+          &nbsp;&nbsp;&nbsp;&nbsp;what I do best
         </div>
       </Block>
-      <Block verticalPadding>
+      <Block bottomPadding>
         <Skills />
       </Block>
       <div id="projects"></div>
       <Block verticalPadding background="gray">
         <h1>Selected work</h1>
         <p>
-          As a designer, I make sure your products and services are align with
-          end-user needs and business goals. My mission is to make people's
-          lives easier - understanding how things work and how things can be
-          improved.
+          As a designer, my mission is to create better experiences for{" "}
+          <span className={styles.lineThrough}>users</span>{" "}
+          <strong>people</strong>.
         </p>
         <Projects />
       </Block>
@@ -47,6 +48,12 @@ function HomePage() {
       <div id="about"></div>
       <Block verticalPadding>
         <About />
+      </Block>
+      <Block verticalPadding background="black">
+        <div className={styles.sentence}>
+          Thank you for reading. If you would like to share feedback or ask any
+          questions, please get in touch.
+        </div>
       </Block>
       <div id="contact"></div>
       <Block verticalPadding background="gray">

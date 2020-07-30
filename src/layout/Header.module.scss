@@ -1,3 +1,5 @@
+@import "../Global.scss";
+
 .container {
   position: fixed;
   top: 0;
@@ -6,6 +8,7 @@
   right: 0;
   padding-left: 30px;
   padding-right: 30px;
+  z-index: 200;
 }
 
 .innerContainer {
@@ -38,7 +41,7 @@
 }
 .menu a {
   margin-left: 70px;
-  color: #f00658;
+  color: $red;
 }
 
 li:first-child {
@@ -52,4 +55,47 @@ a.title {
 }
 a.title:visited {
   color: black;
+}
+
+.burgerIcon {
+  cursor: pointer;
+  text-align: center;
+  width: 30px;
+  // &:hover {
+  //   line {
+  //     stroke-width: 3;
+  //   }
+  // }
+}
+
+.overMenu {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  background-color: $lightgray;
+  position: fixed;
+  right: 23px;
+  top: 62px;
+  width: 160px;
+  border-radius: 8px;
+  a {
+    padding-bottom: 20px;
+    margin-left: 0;
+  }
+  a:last-child {
+    padding-bottom: 10px;
+  }
+}
+
+.overMenu::before {
+  content: "";
+  position: relative;
+  width: 0;
+  height: 0;
+  top: -30px;
+  right: -158px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #f8fcff;
+  clear: both;
 }

@@ -13,6 +13,7 @@ const Block = (props) => {
         [styles.verticalPadding]: props.verticalPadding,
         [styles.bottomPadding]: props.bottomPadding,
         [styles.topPadding]: props.topPadding,
+        [styles.staticTopPadding]: props.staticTopPadding,
       })}
     >
       <div className={styles.innerContainer}>{props.children}</div>

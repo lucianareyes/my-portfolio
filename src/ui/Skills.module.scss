@@ -1,3 +1,9 @@
+@import "../Global.scss";
+
 .skills {
   display: flex;
+  text-align: center;
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
 }

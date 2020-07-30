@@ -1,16 +1,37 @@
+@import "../Global.scss";
+
 .twoColumn {
   margin-top: 30px;
   display: flex;
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
 }
 
 .column {
   width: 50%;
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
 }
 
 .column:first-child {
   padding-right: 20px;
+  @media (max-width: $tablet) {
+    padding-right: 0;
+  }
 }
 
 .column:last-child {
   padding-left: 20px;
+  @media (max-width: $tablet) {
+    padding-left: 0;
+  }
+}
+
+.emoji {
+  width: 40%;
+  max-width: 260px;
+  justify-self: self-end;
+  float: right;
 }

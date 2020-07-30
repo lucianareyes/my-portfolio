@@ -1,7 +1,10 @@
 import React, { Fragment } from "react";
 import { useParams } from "react-router-dom";
 import Block from "../layout/Block";
+import cn from "classnames";
 import styles from "./Project.module.scss";
+import Projects from "../ui/Projects";
+import Contact from "../ui/Contact";
 
 const projects = [
   {
@@ -14,18 +17,32 @@ const projects = [
 function ProjectPage() {
   let { projectId } = useParams();
   const project = projects.find((p) => p.id.toString() === projectId);
-  const projectImage = require(`../assets/img/project${project.id}detail.png`);
-  const affinityDiagramImage = require(`../assets/img/affinity_diagram${project.id}.png`);
-  const surveyInsightsImage = require(`../assets/img/survey_insights${project.id}.png`);
-  const personasImage = require(`../assets/img/personas${project.id}.png`);
-  const lowWireframeImage = require(`../assets/img/low_wireframe${project.id}.png`);
-  const storyboardImage = require(`../assets/img/storyboard${project.id}.png`);
-  const methodImage = require(`../assets/img/method${project.id}.png`);
-  const rebrandingImage = require(`../assets/img/rebranding${project.id}.png`);
+  const projectImage = require(`../assets/img/project${project.id}detail.webp`);
+  const affinityDiagramImage = require(`../assets/img/affinity_diagram${project.id}.webp`);
+  const surveyInsightsImage = require(`../assets/img/survey_insights${project.id}.webp`);
+  const personasImage = require(`../assets/img/personas${project.id}.webp`);
+  const lowWireframeImage = require(`../assets/img/low_wireframe${project.id}.webp`);
+  const storyboardImage = require(`../assets/img/storyboard${project.id}.webp`);
+  const methodImage = require(`../assets/img/method${project.id}.webp`);
+  const rebrandingImage = require(`../assets/img/rebranding${project.id}.webp`);
+  const prototypeVideo = require(`../assets/video/prototype${project.id}.mp4`);
+  const prototypePosterImage = require(`../assets/img/prototype${project.id}poster.png`);
+  const userFlow11Image = require(`../assets/img/userflow_${project.id}_1_1.webp`);
+  const userFlow12Image = require(`../assets/img/userflow_${project.id}_1_2.webp`);
+  const userFlow13Image = require(`../assets/img/userflow_${project.id}_1_3.webp`);
+  const userFlow14Image = require(`../assets/img/userflow_${project.id}_1_4.webp`);
+  const userFlow21Image = require(`../assets/img/userflow_${project.id}_2_1.webp`);
+  const userFlow22Image = require(`../assets/img/userflow_${project.id}_2_2.webp`);
+  const userFlow23Image = require(`../assets/img/userflow_${project.id}_2_3.webp`);
+  const userFlow24Image = require(`../assets/img/userflow_${project.id}_2_4.webp`);
+  const userFlow31Image = require(`../assets/img/userflow_${project.id}_3_1.webp`);
+  const userFlow32Image = require(`../assets/img/userflow_${project.id}_3_2.webp`);
+  const userFlow33Image = require(`../assets/img/userflow_${project.id}_3_3.webp`);
+  const userFlow34Image = require(`../assets/img/userflow_${project.id}_3_4.webp`);
 
   return (
     <Fragment>
-      <Block topPadding background="blue">
+      <Block staticTopPadding background="blue">
         <div className={styles.paddingTop}>
           <h1 className={styles.title}>{project.title}</h1>
           <p className={styles.subtitle}>{project.subtitle}</p>
@@ -192,6 +209,239 @@ function ProjectPage() {
             <img width="100%" src={rebrandingImage} alt="" />
           </div>
         </div>
+      </Block>
+      <Block verticalPadding background="black">
+        <div className={styles.twoColumn}>
+          <div className={styles.column}>
+            <h2>The Solution</h2>
+            <div className={styles.paddingTop}>
+              <p>
+                After gathering all these insight, we were able to identify the
+                feature requirements to our concept.
+              </p>
+              <ul>
+                <li>Rating notification</li>
+                <li>Thank you pop-up</li>
+                <li>Landing page</li>
+                <li>Category page</li>
+                <li>Category detail page</li>
+                <li>Search page</li>
+                <li>“No results”</li>
+                <li>Recommendation page</li>
+                <li>in-app notification</li>
+              </ul>
+            </div>
+          </div>
+          <div className={cn(styles.column, styles.centered)}>
+            <div className={styles.videoContainer}>
+              <video width="100%" controls poster={prototypePosterImage}>
+                <source src={prototypeVideo} type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+        <h2>Rating User Flow</h2>
+        <div className={styles.flow}>
+          <div className={styles.flowImageGrid}>
+            <div className={styles.flowImageContainer}>
+              <img src={userFlow11Image} alt="" />
+              <p>
+                A pop-up asks the user to rate a place they visited during the
+                day. Catering to parents’ needs, the pop-up only appears at
+                evening/night time, when the children are already in bed.
+              </p>
+            </div>
+            <div className={styles.flowImageContainer}>
+              <img src={userFlow12Image} alt="" />
+              <p>
+                To motivate interaction, the user is shown how many Karma points
+                they may earn by following the CTA as well as the remaining
+                points needed until their next bonus.
+              </p>
+            </div>
+            <div className={styles.flowImageContainer}>
+              <img src={userFlow13Image} alt="" />
+              <p>
+                Interaction is kept to a minimum with a familiar points rating
+                system, family-related extra services that may be checked and
+                the possibility to leave comments. Information is limited to a
+                single screen with no scrolling.
+              </p>
+            </div>
+            <div className={styles.flowImageContainer}>
+              <img src={userFlow14Image} alt="" />
+              <p>
+                Upon completion the user receives a Thank-you message that
+                underlines the community character and is presented with an
+                updated points balance.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.paddingTop}>
+          <h2>Ask Community User Flow</h2>
+          <div className={styles.flow}>
+            <div className={styles.flowImageGrid}>
+              <div className={styles.flowImageContainer}>
+                <img src={userFlow21Image} alt="" />
+                <p>
+                  The quickest way to find information on a specific topic or
+                  place is to use search.
+                </p>
+              </div>
+              <div className={styles.flowImageContainer}>
+                <img src={userFlow22Image} alt="" />
+                <p>
+                  In case SitEinander/Mello does not yet contain information on
+                  what the user is looking for, they are encouraged to reach out
+                  to their community. To make this as effortless as possible,
+                  the app provides a pre-written text.
+                </p>
+              </div>
+              <div className={styles.flowImageContainer}>
+                <img src={userFlow23Image} alt="" />
+                <p>
+                  Posting a recommendation request, the user receives a
+                  Thank-you message underlining the community character.
+                </p>
+              </div>
+              <div className={styles.flowImageContainer}>
+                <img src={userFlow24Image} alt="" />
+                <p>
+                  The post immediately becomes part of the community’s
+                  neighborhood feed, motivating users to interact by tone of
+                  voice and through Karma points.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.paddingTop}>
+          <h2>Recommendation User Flow</h2>
+          <div className={styles.flow}>
+            <div className={styles.flowImageGrid}>
+              <div className={styles.flowImageContainer}>
+                <img src={userFlow31Image} alt="" />
+                <p>
+                  Recommendation requests automatically become part of relevant
+                  topic feeds. Replying takes users directly to the
+                  recommendation screen.
+                </p>
+              </div>
+              <div className={styles.flowImageContainer}>
+                <img src={userFlow32Image} alt="" />
+                <p>
+                  They may then type in a business name and the app searches the
+                  Google Maps library for matches.
+                </p>
+              </div>
+              <div className={styles.flowImageContainer}>
+                <img src={userFlow33Image} alt="" />
+                <p>
+                  Finding the correct place, SitEinander/Mello then directly
+                  imports basic information. Similar to ratings, users can add
+                  family specific information by way of a few taps and leave a
+                  comment.
+                </p>
+              </div>
+              <div className={styles.flowImageContainer}>
+                <img src={userFlow34Image} alt="" />
+                <p>
+                  Upon completion, the recommendation turns into a detail page
+                  and becomes part of SitEinander/Mello’s internal library.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Block>
+      <Block verticalPadding background="white">
+        <h2>Project Learnings</h2>
+        <div className={styles.paddingTop}>
+          <p>
+            <strong>• Empathy is strength</strong>
+            <br />
+            <br />
+            As a designer, the primary goal is to understand the user, their
+            problems and then come up with a design that solves it.
+          </p>
+          <p>
+            <strong>• Prioritize</strong>
+            <br />
+            <br />
+            Time managment is crucial to meet all the requeriments to launch an
+            MVP. Follow a roadmap helped us to be focus and deal with
+            out-of-scope requests.
+          </p>
+          <p>
+            <strong>• Feedback</strong>
+            <br />
+            <br />
+            The sooner we get feedback the better. As early as possible saves
+            ample amount of time and re-work.
+          </p>
+          <p>
+            <strong>• Validation</strong>
+            <br />
+            <br />
+            As designers we are all very eager to jump into the process of
+            designing. However, design is only the first step in the process,
+            the more important step is validating your design properly.
+          </p>
+        </div>
+      </Block>
+      <Block verticalPadding background="gray">
+        <h2>Find out more...</h2>
+        <div className={styles.paddingTop}>
+          <p>
+            You can find out more about Siteinander by clicking on the following
+            links.
+          </p>
+          <p>
+            <a
+              href="https://www.siteinander.com/de"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              The SitEinander website
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://maze-impact.com/interview-with-anna-the-co-founder-of-siteinander"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Interview with co-founder Anna Geber
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://www.instagram.com/siteinander"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              SitEinander Instagram
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://mello-app.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Check Mello
+            </a>
+          </p>
+        </div>
+      </Block>
+      <Block verticalPadding background="white">
+        <h3 style={{ textAlign: "center" }}>MORE PROJECTS</h3>
+        <Projects currentProject={1} />
+      </Block>
+      <div id="contact"></div>
+      <Block verticalPadding background="gray">
+        <Contact />
       </Block>
     </Fragment>
   );

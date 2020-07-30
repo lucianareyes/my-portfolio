@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ProjectPage from "./pages/Project";
 import HomePage from "./pages/Home";
 import Header from "./layout/Header";
-import "./App.css";
 import ScrollToTop from "./hooks/scrollToTop";
+import "./Global.scss";
 
 export default function App() {
   return (
@@ -18,6 +18,3 @@ export default function App() {
     </Router>
   );
 }
-
-// You can think of these components as "pages"
-// in your app.

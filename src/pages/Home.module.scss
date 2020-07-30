@@ -1,15 +1,42 @@
+@import "../Global.scss";
+
+.preText {
+  font-family: "FiraCode";
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
 .text {
   font-weight: 600;
   font-size: 56px;
   line-height: 86px;
   font-family: "Overpass";
+  @media (max-width: $tablet) {
+    font-size: 40px;
+    line-height: 56px;
+  }
 }
 
 .sectionIntro {
   font-family: "FiraCode";
   font-size: 16px;
+  padding-top: 40px;
 }
 
 .paddingTop {
-  padding-top: 90px;
+  padding-top: 40px;
+  @media (max-width: $tablet) {
+    padding-top: 20px;
+  }
+}
+
+.lineThrough {
+  text-decoration: line-through;
+  text-decoration-color: $red;
+}
+
+.sentence {
+  font-family: "Overpass";
+  font-size: 38px;
+  font-style: italic;
 }

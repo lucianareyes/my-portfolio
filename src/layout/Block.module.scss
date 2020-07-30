@@ -1,3 +1,5 @@
+@import "../Global.scss";
+
 .blockContainer {
   padding-left: 30px;
   padding-right: 30px;
@@ -10,31 +12,45 @@
 }
 
 .grayBackground {
-  background-color: #f5f5f5;
+  background-color: $gray;
 }
 
 .blackBackground {
-  background-color: #2e2e2e;
+  background-color: $black;
   color: white;
 }
 
 .blueBackground {
-  background-color: #ddeefe;
+  background-color: $blue;
+}
+
+.greenBackground {
+  background-color: $green;
 }
 
 .verticalPadding {
   padding-top: 130px;
   padding-bottom: 130px;
+  @media (max-width: $tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .bottomPadding {
   padding-bottom: 130px;
+  @media (max-width: $tablet) {
+    padding-bottom: 60px;
+  }
 }
 
 .topPadding {
   padding-top: 130px;
+  @media (max-width: $tablet) {
+    padding-top: 60px;
+  }
 }
 
-.greenBackground {
-  background-color: #d9f6f1;
+.staticTopPadding {
+  padding-top: 130px;
 }

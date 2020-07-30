@@ -1,3 +1,5 @@
+@import "../Global.scss";
+
 .container {
   padding-top: 90px;
 }
@@ -17,17 +19,35 @@
 
 .twoColumn {
   display: flex;
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
 }
 
 .column {
   width: 50%;
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
 }
+
 .list {
   margin-top: 90px;
+  @media (max-width: $tablet) {
+    margin-top: 30px;
+  }
 }
 
 .paddingTop {
-  padding-top: 90px;
+  padding-top: 40px;
+  @media (max-width: $tablet) {
+    padding-top: 20px;
+  }
+}
+
+.centered {
+  margin: 0 auto;
+  align-items: center;
 }
 
 .column45 {
@@ -43,11 +63,20 @@
   display: flex;
   flex-direction: column;
   // justify-content: space-between;
-  &:first-child {
-    padding-right: 20px;
+  @media (min-width: $tablet) {
+    &:first-child {
+      padding-right: 20px;
+    }
+    &:last-child {
+      padding-left: 20px;
+    }
   }
-  &:last-child {
-    padding-left: 20px;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    &:last-child {
+      padding-top: 40px;
+    }
   }
 }
 
@@ -57,4 +86,60 @@
   font-size: 16px;
   margin-top: 20px;
   margin-top: auto;
+}
+
+.videoContainer {
+  max-width: 300px;
+  border-radius: 40px;
+  overflow: hidden;
+  padding: 0;
+  video {
+    margin-bottom: -5px;
+  }
+}
+
+.flow {
+  background-color: $lightblue;
+}
+
+.flowImageGrid {
+  display: flex;
+  @media (max-width: $tablet) {
+    flex-wrap: wrap;
+  }
+}
+
+.flowImageContainer {
+  padding: 40px 20px;
+  width: 25%;
+  color: black;
+  img {
+    width: 100%;
+  }
+  &:last-child {
+    padding-right: 40px;
+  }
+  &:first-child {
+    padding-left: 40px;
+  }
+
+  @media (max-width: $tablet) {
+    width: calc(50% - 40px);
+    &:last-child {
+      padding-right: 20px;
+    }
+    &:first-child {
+      padding-left: 20px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    width: calc(100%);
+    &:last-child {
+      padding-right: 20px;
+    }
+    &:first-child {
+      padding-left: 20px;
+    }
+  }
 }
