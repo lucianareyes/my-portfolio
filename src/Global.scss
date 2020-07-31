@@ -1,13 +1,4 @@
-$tablet: 650px;
-$mobile: 500px;
-
-$lightblue: #5bc0eb;
-$black: #2e2e2e;
-$gray: #f5f5f5;
-$lightgray: #f8fcff;
-$blue: #ddeefe;
-$red: #f00658;
-$green: #d9f6f1;
+@import "./assets/styles/Variables.scss";
 
 a,
 a:visited {
@@ -53,6 +44,10 @@ h1 {
   font-size: 56px;
   line-height: 86px;
   margin: 0;
+  @media (max-width: $tablet) {
+    font-size: 42px;
+    line-height: 60px;
+  }
 }
 
 h2 {
