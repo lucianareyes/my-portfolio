@@ -44,7 +44,7 @@ function Contact() {
       </div>
       <div
         className={styles.signature}
-      >{`©2020 Luciana Reyes - made with <3 in Berlin`}</div>
+      >{`©2020 Luciana Reyes — made with <3 in Berlin`}</div>
     </div>
   );
 }

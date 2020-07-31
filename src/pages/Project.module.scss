@@ -143,3 +143,26 @@
     }
   }
 }
+
+.usabilityGrid {
+  display: flex;
+  flex-direction: row;
+  margin-top: 90px;
+  img {
+    padding-right: 20px;
+    width: calc(33.33% - 20px);
+  }
+  img:last-child {
+    padding-right: 0;
+  }
+
+  @media (max-width: $tablet) {
+    margin-top: 45px;
+    flex-direction: column;
+    img {
+      margin-top: 40px;
+      padding-right: 20px;
+      width: 100%;
+    }
+  }
+}

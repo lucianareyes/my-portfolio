@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Card.module.scss";
 import { Link } from "react-router-dom";
+import Image from "./Image";
 
 function Card({
   text,
@@ -21,7 +22,7 @@ function Card({
       }}
       className={styles.card}
     >
-      <img src={img} className={styles.img} alt="" />
+      <Image src={img} className={styles.img} alt="" />
       <div className={styles.content}>
         <h1>{title}</h1>
         <div className={styles.text}>{text}</div>

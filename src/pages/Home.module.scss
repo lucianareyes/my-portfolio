@@ -3,13 +3,12 @@
 .preText {
   font-family: "FiraCode";
   font-size: 20px;
-  padding-bottom: 20px;
 }
 
 .text {
   font-weight: 600;
   font-size: 56px;
-  line-height: 86px;
+  line-height: 76px;
   font-family: "Overpass";
   @media (max-width: $tablet) {
     font-size: 40px;

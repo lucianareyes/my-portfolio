@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
 import styles from "./About.module.scss";
-import emoji from "../assets/img/lulimoji.webp";
+import Image from "./Image";
+
+const imgBaseURL = "https://s3.eu-central-1.amazonaws.com/img.lucianareyes.com";
 
 function About() {
   return (
@@ -66,7 +68,7 @@ function About() {
           </a>
         </div>
         <div className={styles.column}>
-          <img className={styles.emoji} src={emoji} alt="" />
+          <Image src={`${imgBaseURL}/lulimoji`} className={styles.emoji} />
         </div>
       </div>
     </Fragment>

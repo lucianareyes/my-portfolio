@@ -16,6 +16,7 @@ function HomePage() {
         <div className={styles.paddingTop}>
           <span className={styles.preText}>HELLO, I'M LUCIANA REYES</span>
           <br />
+          <br />
           <span className={styles.text}>
             <Link to="/">Product (UX/UI) Designer</Link> infinitely curious
             about people's needs and passionate about creating delightful and
