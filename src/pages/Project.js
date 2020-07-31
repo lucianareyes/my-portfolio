@@ -20,7 +20,6 @@ function ProjectPage() {
   let { projectId } = useParams();
   const project = projects.find((p) => p.id.toString() === projectId);
   const imgRootPath = `${config.imgBaseURL}/projects/${project.id}`;
-  const prototypeVideo = require(`../assets/video/prototype${project.id}.mp4`);
 
   return (
     <Fragment>
@@ -230,7 +229,7 @@ function ProjectPage() {
                 controls
                 poster={`${imgRootPath}/prototype_poster.png`}
               >
-                <source src={prototypeVideo} type="video/mp4" />
+                <source src={`${imgRootPath}/prototype.mp4`} type="video/mp4" />
               </video>
             </div>
           </div>
@@ -279,7 +278,6 @@ function ProjectPage() {
             <div className={styles.flowImageGrid}>
               <div className={styles.flowImageContainer}>
                 <Image src={`${imgRootPath}/userflow2_1`} />
-
                 <p>
                   The quickest way to find information on a specific topic or
                   place is to use search.
@@ -373,9 +371,9 @@ function ProjectPage() {
           </p>
         </div>
         <div className={styles.usabilityGrid}>
-          <Image src={`${imgRootPath}/usability_testing1`} />
-          <Image src={`${imgRootPath}/usability_testing2`} />
-          <Image src={`${imgRootPath}/usability_testing3`} />
+          <Image width="100%" src={`${imgRootPath}/usability_testing1`} />
+          <Image width="100%" src={`${imgRootPath}/usability_testing2`} />
+          <Image width="100%" src={`${imgRootPath}/usability_testing3`} />
         </div>
       </Block>
       <Block verticalPadding background="gray">
