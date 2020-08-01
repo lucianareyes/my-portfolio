@@ -9,7 +9,7 @@ function Skills() {
       <Skill
         img={`${config.imgBaseURL}/skill1`}
         title="Value Proposition Design"
-        text="I make sure your product is focused on your customer needs and values — my keys are empathy, curiosity and creativity."
+        text="I make sure your product is focused on your customer needs and values — my keys are empathy and creativity."
       />
       <Skill
         img={`${config.imgBaseURL}/skill2`}
