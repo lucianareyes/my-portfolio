@@ -10,7 +10,7 @@ function Projects({ currentProject }) {
         <Card
           img={`${config.imgBaseURL}/project1`}
           title="SitEinander"
-          text='Helping parents to to find their "village".'
+          text='Helping parents to find their "village".'
           linkText="View Case Study."
           link="/projects/1"
         />
@@ -26,7 +26,7 @@ function Projects({ currentProject }) {
       <Card
         img={`${config.imgBaseURL}/project4`}
         title="Kiwi"
-        text="The app to buy, sell and exchange second-hand kids clothes and accesories."
+        text="The app to buy, sell and exchange second-hand kids' clothes and accesories."
         linkText="View Case Study."
         external={true}
         link="https://www.behance.net/gallery/86777305/KIWI"

@@ -14,12 +14,12 @@ function Skills() {
       <Skill
         img={`${config.imgBaseURL}/skill2`}
         title="Flexibility & Focus"
-        text="Combining my ability to adapt to changes, time managment and positivity — I’m always ready to work under tight deadlines."
+        text="Combining my ability to adapt to changes, time management and positivity — I’m always ready to work under tight deadlines."
       />
       <Skill
         img={`${config.imgBaseURL}/skill3`}
         title="Design for Inclusivity"
-        text="Exclusion happens when we solve problems using our own biases. I Design inclusively — for people, with people in mind."
+        text='"Exclusion happens when we solve problems using our own biases". I design inclusively — for people, with people in mind.'
       />
     </div>
   );
