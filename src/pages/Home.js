@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
-    <div>
+    <div id="top">
       <Block staticTopPadding bottomPadding>
         <div className={styles.paddingTop}>
           <span className={styles.preText}>HELLO, I'M LUCIANA REYES</span>

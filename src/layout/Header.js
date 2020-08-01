@@ -33,7 +33,7 @@ const Header = () => {
       })}
     >
       <div className={styles.innerContainer}>
-        <Link className={styles.title} to="/" smooth>
+        <Link className={styles.title} to="/#top" smooth>
           luciana.
         </Link>
         {windowWidth > 650 ? (
