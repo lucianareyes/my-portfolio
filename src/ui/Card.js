@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Card.module.scss";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Image from "./Image";
 
 function Card({
@@ -12,6 +12,17 @@ function Card({
   external = false,
   link,
 }) {
+  const history = useHistory();
+
+  function onClick() {
+    if (external) {
+      window.open(link)
+    }
+    else {
+
+      history.push(link);
+    }
+  }
   return (
     <div
       style={{
@@ -21,21 +32,17 @@ function Card({
             : "100%",
       }}
       className={styles.card}
+      onClick={onClick}
     >
       <Image src={img} className={styles.img} alt="" />
       <div className={styles.content}>
         <h1>{title}</h1>
         <div className={styles.text}>{text}</div>
-        {external ? (
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            {linkText}
-          </a>
-        ) : (
-          <Link to={link} className={styles.link}>
-            {linkText}
-          </Link>
-        )}
+        <a href={link} target={external ? '_blank' : ''} rel="noopener noreferrer">
+          {linkText}
+        </a>
       </div>
+
     </div>
   );
 }

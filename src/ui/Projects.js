@@ -11,7 +11,7 @@ function Projects({ currentProject }) {
           img={`${config.imgBaseURL}/project1`}
           title="SitEinander"
           text='Helping parents to find their "village".'
-          linkText="View Case Study."
+          linkText="View Case Study ->"
           link="/projects/1"
         />
       ) : null}
@@ -19,7 +19,7 @@ function Projects({ currentProject }) {
         img={`${config.imgBaseURL}/project2`}
         title="CMF Konex"
         text="[Re]Designing the website of a classical music festival."
-        linkText="Read on Medium."
+        linkText="Read on Medium ->"
         external={true}
         link="https://medium.com/@lucianareyes/re-designing-a-classical-music-festival-website-cad1fb189560"
       />
@@ -27,7 +27,7 @@ function Projects({ currentProject }) {
         img={`${config.imgBaseURL}/project4`}
         title="Kiwi"
         text="The app to buy, sell and exchange second-hand kids' clothes and accesories."
-        linkText="View Case Study."
+        linkText="View Case Study ->"
         external={true}
         link="https://www.behance.net/gallery/86777305/KIWI"
       />
@@ -35,7 +35,7 @@ function Projects({ currentProject }) {
         img={`${config.imgBaseURL}/project5`}
         title="Digital Mag"
         text="Designing a Digital Magazine from scratch for the Eco-Conscious"
-        linkText="Read in Medium."
+        linkText="Read in Medium ->"
         external={true}
         link="https://medium.com/@lucianareyes/digital-magazine-from-scratch-ux-case-study-9c7255dd2b39"
       />
@@ -43,7 +43,7 @@ function Projects({ currentProject }) {
         img={`${config.imgBaseURL}/project3`}
         title="Netflix live"
         text="Adding a feature to watch live events"
-        linkText="Coming soon."
+        linkText="Coming soon"
       />
     </div>
   );

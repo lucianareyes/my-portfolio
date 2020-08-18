@@ -55,6 +55,15 @@ a.title {
 }
 a.title:visited {
   color: black;
+  font-weight: normal;
+}
+a.title:focus {
+  color: black;
+  font-weight: normal;
+}
+a.title:hover {
+  color: black;
+  font-weight: normal;
 }
 
 .burgerIcon {
