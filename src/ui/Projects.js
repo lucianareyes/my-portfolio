@@ -9,7 +9,7 @@ function Projects({ currentProject }) {
       {currentProject !== 1 ? (
         <Card
           img={`${config.imgBaseURL}/project1`}
-          title="SitEinander"
+          title="Mello"
           text='Helping parents to find their "village".'
           linkText="View Case Study ->"
           link="/projects/1"
