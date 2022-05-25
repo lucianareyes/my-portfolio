@@ -70,10 +70,10 @@ function ProjectPage() {
             a very small support network.
           </p>
           <p>
-            According to a German health insurance 40 percent of all parents
-            suffer every day from exhaustion and 80% of mothers feel lonely. And
-            these numbers are from before Covid-19. Parents need more support
-            than ever.
+            According to a German health insurance 80% of all parents suffer
+            every day from exhaustion and 46% of mothers feel lonely. And these
+            numbers are from before Covid-19. Parents need more support than
+            ever.
           </p>
           <p>
             After many weeks of physical distancing, many parents and their
