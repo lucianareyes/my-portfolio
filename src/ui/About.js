@@ -42,8 +42,8 @@ function About() {
             </a>
             , Berlin. Working closely with designers and product managers, I
             found a new love for digital design and a fascination for how
-            interfaces are designed. That was the moment when I realized that I was
-            going to be a Product Designer.
+            interfaces are designed, leading me to a change in career towards
+            Product Design.
           </p>
           <p>
             I am in love with Design. Design in all its forms - and I am always
@@ -52,8 +52,8 @@ function About() {
             the people who live in it.
           </p>
           <p>
-            I also love to hear good music, watch high-rated movies, recharge energy
-            in nature, yoga, travelling, cultural differences and
+            I also love to hear good music, watch high-rated movies, recharge
+            energy in nature, yoga, travelling, cultural differences and
             contrasting points of view.
           </p>
         </div>
