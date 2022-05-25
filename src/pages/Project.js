@@ -11,7 +11,7 @@ import config from "../config";
 const projects = [
   {
     id: 1,
-    title: "SitEinander — Mello",
+    title: "Mello",
     subtitle: "Connecting local parents",
   },
 ];
@@ -35,13 +35,13 @@ function ProjectPage() {
           <div className={styles.column}>
             <h4>Overview</h4>
             <p>
-              The goal of SitEinander is to make the life of parents and their
+              The goal of Mello is to make the life of parents and their
               children easier by helping them to connect with other families in
               their neighborhood and giving them the digital tools to simply
               exchange free babysitting with their trusted support-network.
             </p>
             <p>
-              So far, SitEinander is focused on offering parents an exchange of
+              So far, Mello is focused on offering parents an exchange of
               babysitting and playdates. The aim of this project was to create a
               new feature that allows parents to exchange recommendations and
               discovery of interesting offers of family friendly businesses.
@@ -50,7 +50,7 @@ function ProjectPage() {
           <div className={styles.column}>
             <h4>My Role</h4>
             <p>
-              <strong>UX/UI Designer — SitEinander</strong>
+              <strong>UX/UI Designer — Mello</strong>
             </p>
             <p>
               User Research, Persona, Storyboard, Wireframes, Information
@@ -96,7 +96,7 @@ function ProjectPage() {
         <ul className={styles.list}>
           <li>12 user interviews</li>
           <li>About 3258 digital stickies</li>
-          <li>Reaching out to existing SitEinander Users</li>
+          <li>Reaching out to existing Mello Users</li>
           <li>70+ user answers to our survey</li>
           <li>Focus on Berlin</li>
         </ul>
@@ -131,7 +131,7 @@ function ProjectPage() {
             <p>
               With the help of <strong>online surveys</strong>, telephone and
               Zoom <strong>interviews</strong>, we gained a better understanding
-              of SitEinander's users.
+              of Mello's users.
             </p>
             <p>
               In order to fix all the pains of our users, we created{" "}
@@ -185,7 +185,7 @@ function ProjectPage() {
             <h2>Rebranding</h2>
             <div className={styles.paddingTop}>
               <p>
-                We've working in the middle of the SitEinander rebranding -
+                We've working in the middle of the Mello rebranding -
                 SitEinander is now Mello and its brand will change. We tried to
                 design our features based on the new design system.
               </p>
@@ -415,17 +415,8 @@ function ProjectPage() {
         <h2>Find out more...</h2>
         <div className={styles.paddingTop}>
           <p>
-            You can find out more about SitEinander by clicking on the following
+            You can find out more about Mello by clicking on the following
             links.
-          </p>
-          <p>
-            <a
-              href="https://www.siteinander.com/de"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              The SitEinander website
-            </a>
           </p>
           <p>
             <a
@@ -438,11 +429,11 @@ function ProjectPage() {
           </p>
           <p>
             <a
-              href="https://www.instagram.com/siteinander"
+              href="https://www.instagram.com/mello.app"
               target="_blank"
               rel="noopener noreferrer"
             >
-              SitEinander Instagram
+              Mello Instagram
             </a>
           </p>
           <p>
@@ -451,7 +442,25 @@ function ProjectPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Check Mello
+              Mello's website
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://apps.apple.com/de/app/siteinander/id1478633013"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              AppStore
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://play.google.com/store/apps/details?id=de.siteinander.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              PlayStore
             </a>
           </p>
         </div>
