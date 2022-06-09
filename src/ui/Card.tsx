@@ -46,13 +46,7 @@ function Card({
       <div className={styles.content}>
         <h1>{title}</h1>
         <div className={styles.text}>{text}</div>
-        <a
-          href={link}
-          target={external ? "_blank" : ""}
-          rel="noopener noreferrer"
-        >
-          {linkText}
-        </a>
+        <a>{linkText}</a>
       </div>
     </div>
   );

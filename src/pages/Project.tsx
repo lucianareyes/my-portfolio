@@ -7,7 +7,31 @@ import Projects from "../ui/Projects";
 import Contact from "../ui/Contact";
 import Image from "../ui/Image";
 import config from "../config";
-import projects, { ParagraphType } from "../data/projects";
+import projects, {
+  ParagraphType,
+  Section as SectionType,
+} from "../data/projects";
+
+type SectionProps = {
+  section: SectionType;
+};
+
+const Section = ({ section }: SectionProps) => (
+  <div className={styles.column}>
+    <h4>{section.title}</h4>
+    {section.paragraphs.map((p) =>
+      p.type === ParagraphType.Text ? (
+        <p dangerouslySetInnerHTML={{ __html: p.text }}></p>
+      ) : (
+        <ul className={styles.list}>
+          {p.items.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      )
+    )}
+  </div>
+);
 
 function ProjectPage() {
   let { projectId } = useParams<{ projectId: string }>();
@@ -29,40 +53,14 @@ function ProjectPage() {
             {block.sections
               .filter((item, i) => i < 2)
               .map((section) => (
-                <div className={styles.column}>
-                  <h4>{section.title}</h4>
-                  {section.paragraphs.map((p) =>
-                    p.type === ParagraphType.Text ? (
-                      <p dangerouslySetInnerHTML={{ __html: p.text }}></p>
-                    ) : (
-                      <ul className={styles.list}>
-                        {p.items.map((item) => (
-                          <li>{item}</li>
-                        ))}
-                      </ul>
-                    )
-                  )}
-                </div>
+                <Section section={section} />
               ))}
           </div>
           <div className={styles.row}>
             {block.sections
               .filter((item, i) => i >= 2)
               .map((section) => (
-                <div className={styles.column}>
-                  <h4>{section.title}</h4>
-                  {section.paragraphs.map((p) =>
-                    p.type === ParagraphType.Text ? (
-                      <p dangerouslySetInnerHTML={{ __html: p.text }}></p>
-                    ) : (
-                      <ul className={styles.list}>
-                        {p.items.map((item) => (
-                          <li>{item}</li>
-                        ))}
-                      </ul>
-                    )
-                  )}
-                </div>
+                <Section section={section} />
               ))}
           </div>
         </Block>

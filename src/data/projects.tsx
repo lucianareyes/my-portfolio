@@ -7,12 +7,12 @@ interface Project {
   blocks: Block[];
 }
 
-interface Block {
+export interface Block {
   backgroundColor?: string;
   sections: Section[];
 }
 
-interface Section {
+export interface Section {
   title: string;
   paragraphs: (Text | List)[];
 }
@@ -57,7 +57,7 @@ const projects: Project[] = [
             paragraphs: [
               {
                 type: ParagraphType.Text,
-                text: "<strong>Product Designer - AnyMove.<strong>",
+                text: "<strong>Product Designer<strong>",
               },
               {
                 type: ParagraphType.Text,
