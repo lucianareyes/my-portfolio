@@ -34,7 +34,7 @@ export enum ParagraphType {
 
 const projects: Project[] = [
   {
-    id: 2,
+    id: 1,
     title: "AnyMove",
     subtitle: "Creating behavioral change in mobility on global scale",
     simple: true,
@@ -104,7 +104,7 @@ const projects: Project[] = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     title: "Mello",
     subtitle: "Connecting local parents",
     simple: false,

@@ -10,22 +10,22 @@ interface Props {
 function Projects({ currentProject }: Props) {
   return (
     <div className={styles.projects}>
-      {currentProject !== 2 && (
-        <Card
-          img={`${config.imgBaseURL}/project2`}
-          title="AnyMove"
-          text="Creating behavioral change in mobility on global scale"
-          linkText="View Case Study ->"
-          link="/projects/2"
-        />
-      )}
       {currentProject !== 1 && (
         <Card
           img={`${config.imgBaseURL}/project1`}
+          title="AnyMove"
+          text="Creating behavioral change in mobility on global scale"
+          linkText="View Case Study ->"
+          link="/projects/1"
+        />
+      )}
+      {currentProject !== 2 && (
+        <Card
+          img={`${config.imgBaseURL}/project2`}
           title="Mello"
           text='Helping parents to find their "village".'
           linkText="View Case Study ->"
-          link="/projects/1"
+          link="/projects/2"
         />
       )}
       {currentProject !== 3 && (
