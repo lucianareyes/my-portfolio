@@ -266,6 +266,7 @@ const projects: Project[] = [
                 type: ParagraphType.List,
                 items: [
                   "Redesign the web and the desk app",
+
                   "Bringing together technology and strategy",
                   "Encouraging conscious consumption and driving sustainability",
                 ],
