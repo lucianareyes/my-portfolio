@@ -31,8 +31,15 @@
   }
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+}
+
 .list {
-  margin-top: 90px;
   @media (max-width: $tablet) {
     margin-top: 30px;
   }

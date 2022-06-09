@@ -2,7 +2,13 @@ import React from "react";
 import styles from "./Skill.module.scss";
 import Image from "./Image";
 
-function Card({ text, title, img }) {
+interface Props {
+  text: string;
+  title: string;
+  img?: string;
+}
+
+function Card({ text, title, img }: Props) {
   return (
     <div className={styles.skill}>
       <Image src={img} className={styles.img} alt="" />

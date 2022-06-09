@@ -3,6 +3,16 @@ import styles from "./Card.module.scss";
 import { useHistory } from "react-router-dom";
 import Image from "./Image";
 
+interface Props {
+  img: string;
+  text: string;
+  title: string;
+  linkText: string;
+  cardsPerRow?: number;
+  external?: boolean;
+  link?: string;
+}
+
 function Card({
   text,
   title,
@@ -11,16 +21,14 @@ function Card({
   cardsPerRow = 2,
   external = false,
   link,
-}) {
+}: Props) {
   const history = useHistory();
 
   function onClick() {
     if (external) {
-      window.open(link)
-    }
-    else {
-
-      history.push(link);
+      window.open(link);
+    } else {
+      history.push(link!);
     }
   }
   return (
@@ -38,11 +46,14 @@ function Card({
       <div className={styles.content}>
         <h1>{title}</h1>
         <div className={styles.text}>{text}</div>
-        <a href={link} target={external ? '_blank' : ''} rel="noopener noreferrer">
+        <a
+          href={link}
+          target={external ? "_blank" : ""}
+          rel="noopener noreferrer"
+        >
           {linkText}
         </a>
       </div>
-
     </div>
   );
 }
