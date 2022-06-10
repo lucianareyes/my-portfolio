@@ -34,13 +34,6 @@ function Contact() {
         >
           Behance
         </a>
-        <a
-          href="https://www.instagram.com/luliphotos"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram
-        </a>
       </div>
       <div
         className={styles.signature}

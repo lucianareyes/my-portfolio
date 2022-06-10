@@ -1,14 +1,31 @@
-interface Project {
+export interface FullProject {
   id: number;
+  type: ProjectType.Full;
   title: string;
   backgroundColorHero: string;
   subtitle: string;
   simple: boolean;
   blocks: Block[];
 }
+export enum ProjectType {
+  Full = "full",
+  External = "external",
+}
+
+export interface ExternalProject {
+  id: number;
+  type: ProjectType.External;
+  title: string;
+  subtitle: string;
+  linkText: string;
+  link: string;
+}
+
+export type Project = FullProject | ExternalProject;
 
 export interface Block {
   backgroundColor?: string;
+  contactBlock: boolean;
   sections: Section[];
 }
 
@@ -38,10 +55,12 @@ const projects: Project[] = [
     title: "AnyMove",
     subtitle: "Creating behavioral change in mobility on global scale",
     simple: true,
+    type: ProjectType.Full,
     backgroundColorHero: "sand",
     blocks: [
       {
         backgroundColor: "white",
+        contactBlock: true,
         sections: [
           {
             title: "Overview",
@@ -61,7 +80,7 @@ const projects: Project[] = [
               },
               {
                 type: ParagraphType.Text,
-                text: "User Research, Persona, Storyboard, Wireframes, Information Architecture, Visual Design, Prototyping & Testing",
+                text: "Qualitative user interview, Creation of the Design System, Wireframes, Prototyping & Testing",
               },
               {
                 type: ParagraphType.Text,
@@ -107,11 +126,13 @@ const projects: Project[] = [
     id: 2,
     title: "Mello",
     subtitle: "Connecting local parents",
+    type: ProjectType.Full,
     simple: false,
     backgroundColorHero: "blue",
     blocks: [
       {
         backgroundColor: "white",
+        contactBlock: true,
         sections: [
           {
             title: "Overview",
@@ -152,10 +173,12 @@ const projects: Project[] = [
     title: "Beelinguapp",
     subtitle: "Learn languages with stories you love.",
     simple: true,
+    type: ProjectType.Full,
     backgroundColorHero: "orange",
     blocks: [
       {
         backgroundColor: "white",
+        contactBlock: true,
         sections: [
           {
             title: "Overview",
@@ -223,11 +246,13 @@ const projects: Project[] = [
     id: 4,
     title: "Yoona.ai",
     subtitle: "Automate your design process to three clicks",
+    type: ProjectType.Full,
     simple: true,
     backgroundColorHero: "purple",
     blocks: [
       {
         backgroundColor: "white",
+        contactBlock: true,
         sections: [
           {
             title: "Overview",
@@ -289,6 +314,39 @@ const projects: Project[] = [
         ],
       },
     ],
+  },
+  {
+    id: 5,
+    title: "Kiwi",
+    subtitle:
+      "The app to buy, sell and exchange second-hand kids' clothes and accesories",
+    linkText: "View Case Study ->",
+    link: "https://www.behance.net/gallery/86777305/KIWI",
+    type: ProjectType.External,
+  },
+  {
+    id: 6,
+    title: "CMF Konex",
+    subtitle: "[Re]Designing the website of a classical music festival",
+    linkText: "Read on Medium ->",
+    link: "https://medium.com/@lucianareyes/re-designing-a-classical-music-festival-website-cad1fb189560",
+    type: ProjectType.External,
+  },
+  {
+    id: 7,
+    title: "Digital Mag",
+    subtitle: "Designing a Digital Magazine from scratch for the Eco-Conscious",
+    linkText: "Read in Medium ->",
+    link: "https://medium.com/@lucianareyes/digital-magazine-from-scratch-ux-case-study-9c7255dd2b39",
+    type: ProjectType.External,
+  },
+  {
+    id: 8,
+    title: "Netflix live",
+    subtitle: "Adding a feature to watch live events",
+    linkText: "Coming soon",
+    link: "",
+    type: ProjectType.External,
   },
 ];
 

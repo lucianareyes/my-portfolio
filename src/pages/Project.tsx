@@ -8,7 +8,9 @@ import Contact from "../ui/Contact";
 import Image from "../ui/Image";
 import config from "../config";
 import projects, {
+  FullProject,
   ParagraphType,
+  ProjectType,
   Section as SectionType,
 } from "../data/projects";
 
@@ -35,10 +37,12 @@ const Section = ({ section }: SectionProps) => (
 
 function ProjectPage() {
   let { projectId } = useParams<{ projectId: string }>();
-  const project = projects.find((p) => p.id.toString() === projectId);
+  const project = projects.find(
+    (p) => p.id.toString() === projectId
+  ) as FullProject;
   const imgRootPath = `${config.imgBaseURL}/projects/${project?.id}`;
 
-  return project ? (
+  return project && project.type === ProjectType.Full ? (
     <Fragment>
       <Block staticTopPadding background={project.backgroundColorHero}>
         <div className={styles.paddingTop}>
@@ -63,6 +67,14 @@ function ProjectPage() {
                 <Section section={section} />
               ))}
           </div>
+
+          {block.contactBlock ? (
+            <div className={styles.row}>
+              <div className={styles.contact}>
+                Reach out to me to learn more about this project
+              </div>
+            </div>
+          ) : null}
         </Block>
       ))}
 
@@ -485,14 +497,14 @@ function ProjectPage() {
 
       <Block verticalPadding background="gray">
         <h3 style={{ textAlign: "center" }}>MORE PROJECTS</h3>
-        <Projects currentProject={1} />
+        <Projects currentProject={parseInt(projectId)} />
       </Block>
       <Block verticalPadding background="white">
         <Contact />
       </Block>
     </Fragment>
   ) : (
-    <></>
+    <div>Project not found</div>
   );
 }
 
